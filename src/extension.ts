@@ -21,6 +21,15 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	context.subscriptions.push(disposable);
+
+	let disposable2 = vscode.commands.registerCommand('helloworld.refresh', () => {
+		// The code you place here will be executed every time your command is executed
+
+		// Display a message box to the user
+		vscode.window.showInformationMessage('Refreshing Clubhouse Issues!');
+	});
+
+	context.subscriptions.push(disposable2);
 }
 
 // this method is called when your extension is deactivated
