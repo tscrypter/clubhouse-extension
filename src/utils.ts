@@ -21,6 +21,20 @@ export function sleep(millis: number) {
     });
 }
 
+export function allMatches(regex: RegExp, string: string, group: number) {
+	return {
+		[Symbol.iterator]: function* () {
+			let m: RegExpExecArray | null;
+			while (m = regex.exec(string)) {
+				yield m[group];
+				if (regex.lastIndex === m.index) {
+					regex.lastIndex++;
+				}
+			}
+		}
+	};
+}
+
 export async function fetchAll(clubhouse: any, first: Promise<any>) {
     const all = [];
 
