@@ -10,16 +10,27 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:clubhouse.helloWorld"
+		"onView:nodeDependencies"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "clubhouse.helloWorld",
-				"title": "Hello World"
-			}
-		]
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "tomd-node-explorer",
+					"title": "Node Explorer",
+					"icon": "images/clubhouse_flag.png"
+				}
+			]
+		},
+		"views": {
+			"tomd-node-explorer": [
+				{
+					"id": "nodeDependencies",
+					"name": "Node Dependencies"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
