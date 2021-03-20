@@ -1,6 +1,6 @@
 {
-	"name": "helloworld",
-	"displayName": "HelloWorld",
+	"name": "clubhouse",
+	"displayName": "Clubhouse",
 	"description": "",
 	"version": "0.0.1",
 	"engines": {
@@ -14,8 +14,17 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "clubhouse-explorer",
+					"title": "Clubhouse",
+					"icon": "images/clubhouse_flag.png"
+				}
+			]
+		},
 		"views": {
-			"explorer": [
+			"clubhouse-explorer": [
 				{
 					"id": "clubhouseStories",
 					"name": "Clubhouse Stories"
