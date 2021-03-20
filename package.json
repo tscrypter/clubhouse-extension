@@ -27,7 +27,8 @@
 			"clubhouse-explorer": [
 				{
 					"id": "clubhouseStories",
-					"name": "Clubhouse Stories"
+					"name": "Stories",
+					"icon": "images/stories.svg"
 				}
 			]
 		},
